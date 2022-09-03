@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* .wrap-container{
+            /position: absolute;
+        } */
+        .wrap-box-at-center{
+           background-color: aqua;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 40%;
+          border-radius: 6px;
+        }
+        .wrap-label{
+            width: 250px;
+            height: 250px;
+        }
+        .wrap-header-box{
+            font-size: 20px;
+            text-align: center;
+            padding: 1rem;
+        }
+        .label1{
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 20px;
+        }
+        .input1{
+            position: relative;
+            top: 10px;
+            left: 40px;
+        }
+        .label2{
+            text-align: center;
+            padding-top: 1rem;
+            font-size: 20px;
+        }
+        .input2{
+            position: relative;
+            top: 10px;
+            left: 40px;
+        }
+        .button1{
+            position: relative;
+            top: 10px;
+            left: 85px;
+            padding-top: 1rem;
+        }
+        #submitButton{
+            width: 80px;
+            height: 20px;
+        }
+        .label3{
+            text-align: center;
+            padding-top: 1rem;
+        }
+        #cLabel{
+            text-align: center;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap-container">
+
+        <div class="wrap-box-at-center">
+
+
+
+         <div class="wrap-label">
+            <div class="wrap-header-box"><p>Hypotenuse Calculator</p></div>
+            <label id="aLabel"><p class="label1">Side A:</p></label>
+            
+            <div class="input1"><input type="text" id="aTextBox"></div>
+            <label id="aLabel"><p class="label2">Side B:</p></label>
+            
+            <div class="input2"><input type="text" id="bTextBox"></div>
+            <div class="button1"><button type="button" id="submitButton">Submit</button></div>
+            <label id="cLabel"><p class="label3">Side C:</p></label>
+            <br>
+         </div>
+
+
+        </div>
+    </div>
+
+    <script>
+     
+     let a;
+     let b;
+     let c;
+
+     document.getElementById("submitButton").onclick = function(){
+
+      a = document.getElementById("aTextBox").value;
+      a = Number(a)
+     
+      b = document.getElementById("bTextBox").value;
+      b = Number(b)
+
+      c =  Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+      
+     // console.log("side c:" , c);
+
+        console.log(c);
+      document.getElementById("cLabel") .innerHTML = "Side c: " + c;
+
+     // document.getElementById("myLabel").innerHTML = "Hello " + username;
+     }
+    //   let a;
+    //   let b;
+    //   let c;
+
+    //   a = window.prompt("Enter side A");
+    //   a = Number(a)
+     
+    //   b = window.prompt("Enter side B");
+    //   b = Number(b)
+
+    //   c =  Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+      
+    //   console.log("side c:" , c);
+
+
+
+       
+    </script>
+</body>
+</html>
